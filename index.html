@@ -3,18 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orsmond Advisory | Defence & Law Enforcement Tender Specialists Queensland</title>
-    <meta name="description" content="Win defence and law enforcement contracts in Queensland. Former RAAF procurement experts. Success-based fees. We handle ASDEFCON, DISP, and security compliance.">
-    <meta name="keywords" content="defence tenders Queensland, law enforcement contracts, ASDEFCON, DISP compliance, defence procurement Brisbane, government tenders defence">
+    <meta name="robots" content="index, follow">
+    <title>Orsmond Advisory | Government Tender Consultancy Queensland</title>
+    <meta name="description" content="Win government contracts in Queensland. We identify opportunities, write competitive bids, and manage submissions for established businesses. Success-based fees.">
+    <meta name="keywords" content="government tenders Queensland, government contracts Brisbane, tender consultancy, procurement consulting, Queensland government contracts, AusTender, QTenders">
     <!-- Open Graph / Social Media Preview -->
-    <meta property="og:title" content="Defence & Law Enforcement Tender Specialists | Orsmond Advisory">
-    <meta property="og:description" content="Win high-security government contracts. Former RAAF officers. Zero upfront cost.">
+    <meta property="og:title" content="Orsmond Advisory | Government Tender Consultancy Queensland">
+    <meta property="og:description" content="Win government contracts in Queensland. We identify opportunities, write competitive bids, and manage submissions for established businesses. Success-based fees.">
     <meta property="og:url" content="https://orsmondadvisory.com.au">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://orsmondadvisory.com.au/logo.png">
+    <meta property="og:site_name" content="Orsmond Advisory">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Defence & Law Enforcement Tender Specialists | Orsmond Advisory">
-    <meta name="twitter:description" content="Win high-security government contracts. Former RAAF officers. Zero upfront cost.">
+    <meta name="twitter:title" content="Orsmond Advisory | Government Tender Consultancy Queensland">
+    <meta name="twitter:description" content="Win government contracts in Queensland. We identify opportunities, write competitive bids, and manage submissions for established businesses. Success-based fees.">
+    <!-- Structured Data (JSON-LD) - Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Orsmond Advisory",
+        "description": "Government tender consultancy for Queensland businesses. We identify opportunities, write competitive bids, and manage submissions. Success-based fees.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Brisbane",
+            "addressRegion": "QLD",
+            "addressCountry": "AU"
+        },
+        "email": "info@orsmondadvisory.com.au",
+        "url": "https://orsmondadvisory.com.au",
+        "serviceArea": {
+            "@type": "State",
+            "name": "Queensland"
+        },
+        "services": [
+            "Government tender consultancy",
+            "Tender identification",
+            "Bid writing and development",
+            "Procurement consulting",
+            "AusTender and QTenders support",
+            "Submission management"
+        ]
+    }
+    </script>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Montserrat -->
@@ -38,20 +70,32 @@
         .mobile-menu { transform: translateX(-100%); transition: transform 0.3s ease, opacity 0.3s ease; }
         .mobile-menu.open { transform: translateX(0); }
         .card-shadow { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05); }
+        .contact-form-input { width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; transition: border-color 0.2s, box-shadow 0.2s; background: white; }
+        .contact-form-input:focus { outline: none; border-color: #d4af37; box-shadow: 0 0 0 3px rgba(212,175,55,0.15); }
+        select.contact-form-input { appearance: auto; cursor: pointer; }
+        .contact-form-label { display: block; font-weight: 600; margin-bottom: 6px; color: #334155; font-size: 0.9rem; }
+        /* Header Logo */
+        header img[src*="logo"],
+        header img[alt*="Orsmond"],
+        header a[aria-label*="Home"] img {
+            height: 325px !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
     <!-- Header / Navigation -->
-    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm overflow-visible">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
+            <div class="flex justify-between items-center h-20 overflow-visible">
                 <div class="flex items-center gap-4">
                     <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 hover:text-slate-900 focus:outline-none" aria-label="Open menu">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                     <a href="#" class="flex items-center shrink-0" aria-label="Orsmond Advisory Home">
-                        <img src="logo.png" alt="Orsmond Advisory" class="h-auto w-auto object-contain" style="width: 200px; max-width: min(200px, 100%);">
+                        <img src="https://orsmondadvisory.com.au/logo.png" alt="Orsmond Advisory">
                     </a>
                 </div>
                 <nav class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wider text-slate-600">
@@ -96,10 +140,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="lg:w-2/3">
                 <h1 class="text-4xl md:text-6xl font-800 text-white leading-tight mb-6">
-                    Win Defence & High-Security Government Contracts in Queensland.
+                    Win Government Contracts. Grow Consistent Revenue.
                 </h1>
                 <p class="text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
-                    For specialist manufacturers, industrial services, and technical contractors: we identify high-value defence and law enforcement opportunities, write competitive bids, and manage the complex compliance requirements. Founded by former RAAF procurement specialists.
+                    For industrial, marine, and technical businesses in Queensland: we identify high-value government contracts across state, federal, and local levels. We specialise in defence and high-security procurement, with proven capability in maritime, infrastructure, and civil contracts.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#contact" class="bg-gold text-slate-900 px-10 py-5 rounded-md font-800 text-center hover:bg-yellow-500 transition-all shadow-xl uppercase tracking-wide">
@@ -109,7 +153,6 @@
                         See How It Works
                     </a>
                 </div>
-                <p class="mt-12 text-white/80 text-sm font-semibold">Specialising in Defence, Law Enforcement & High-Security Government Procurement | Queensland, Commonwealth & Federal</p>
             </div>
         </div>
     </section>
@@ -119,7 +162,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-800 text-slate-900 mb-6">The Opportunity Is Real. The Process Is Complex.</h2>
             <p class="text-slate-600 max-w-3xl mx-auto text-lg leading-relaxed">The Queensland Government spends approximately $35 billion annually on procurement. For capable businesses, the main barrier is process and access, not capability.</p>
-            <p class="text-slate-600 max-w-3xl mx-auto mt-4 text-lg leading-relaxed">The <em>Queensland Procurement Policy 2026</em> sets aside 30% of that spend ($10.5 billion) for small and medium enterprises. At the federal level, Commonwealth procurement runs to around $100 billion annually, with strong SME targets across major agencies. That shift creates a clearer route for businesses ready to compete for government work.</p>
+            <p class="text-slate-600 max-w-3xl mx-auto mt-4 text-lg leading-relaxed">The Queensland Procurement Policy 2026 sets aside 30% of that spend ($10.5 billion) for small and medium enterprises. At the federal level, Commonwealth procurement runs to around $100 billion annually, with strong SME targets across major agencies. That shift creates a clearer route for businesses ready to compete for government work.</p>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-12 mb-12">
             <div class="p-8 border border-slate-100 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all bg-slate-50 card-shadow">
@@ -129,41 +172,23 @@
             </div>
             <div class="p-8 border border-slate-100 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all bg-slate-50 card-shadow">
                 <i class="fas fa-shield-halved text-3xl text-slate-400 mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">Defence & Security Compliance</h3>
-                <p class="text-slate-600 leading-relaxed">ASDEFCON contract terms, DISP security requirements, vetting processes, and Defence-specific evaluation criteria create barriers that keep capable businesses out. These aren't impossible - they're just unfamiliar if you've never worked in the sector.</p>
+                <h3 class="text-xl font-bold mb-4">Compliance Headaches</h3>
+                <p class="text-slate-600 leading-relaxed">Security, quality, and industry standards (ASDEFCON, ISO, DISP) feel like a maze when you're focused on delivering for customers.</p>
             </div>
             <div class="p-8 border border-slate-100 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all bg-slate-50 card-shadow">
                 <i class="fas fa-hourglass-half text-3xl text-slate-400 mb-6"></i>
                 <h3 class="text-xl font-bold mb-4">Opportunities You Never See</h3>
                 <p class="text-slate-600 leading-relaxed">The right contracts are out there across defence, infrastructure, and civil. Finding and qualifying them, though, takes expertise you may not have in-house.</p>
+                <p class="text-slate-600 leading-relaxed mt-4">If you want to understand where your business fits and how to position for these opportunities, we can help you navigate it.</p>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-slate-600 max-w-2xl mx-auto">If you want to understand where your business fits and how to position for these opportunities, we can help you navigate it.</p>
         </div>
     </section>
 
-    <!-- Why Defence & Law Enforcement Procurement Is Different -->
+    <!-- Why We're Different -->
     <section class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-800 text-slate-900 mb-6">Why Defence & Law Enforcement Procurement Is Different</h2>
-            <p class="text-slate-600 max-w-3xl mx-auto text-lg leading-relaxed mb-6">Defence and high-security government contracts come with layers most consultants don't understand: ASDEFCON terms, security clearances, Defence Industry Security Program (DISP) compliance, and evaluation criteria that prioritise capability and security over price.</p>
-            <p class="text-slate-600 max-w-3xl mx-auto text-lg leading-relaxed mb-6">We know this landscape because we've worked both sides. Our team includes former Royal Australian Air Force operations officers who have evaluated and awarded defence contracts, plus corporate procurement specialists who have won them from the industry side. We understand what Defence evaluators are looking for because we've been those evaluators.</p>
-            <p class="text-slate-600 max-w-3xl mx-auto text-lg leading-relaxed">If you manufacture components, provide technical services, or deliver industrial capability relevant to defence or law enforcement, we can position you to win.</p>
-        </div>
-    </section>
-
-    <!-- The Defence & Law Enforcement Opportunity -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-800 text-slate-900 mb-8 text-center">The Defence & Law Enforcement Opportunity</h2>
-            <div class="max-w-3xl mx-auto space-y-6 text-slate-600 text-lg leading-relaxed">
-                <p>Queensland is home to significant defence and law enforcement procurement activity:</p>
-                <p><strong>Defence:</strong> The Australian Defence Force spends billions annually on everything from vehicle maintenance and marine services to specialised manufacturing and technical support. With major bases at Amberley, Gallipoli Barracks, and HMAS Moreton, Queensland businesses are well-positioned for both direct Defence contracts and prime contractor subcontracting opportunities.</p>
-                <p><strong>Law Enforcement:</strong> Queensland Police Service, Corrective Services, and federal agencies regularly procure equipment, vehicles, protective gear, communications systems, and specialised services. These contracts value local capability, fast response times, and understanding of operational requirements.</p>
-                <p><strong>The Compliance Barrier:</strong> Most capable businesses never compete for these contracts because the compliance requirements feel overwhelming: Defence Industry Security Program (DISP) registration, ASDEFCON contract terms, security clearances, and evaluation criteria that differ dramatically from commercial procurement.</p>
-                <p>That's where we come in. We handle the compliance complexity so you can focus on what you do best: delivering quality work.</p>
-            </div>
+            <h2 class="text-3xl md:text-4xl font-800 text-slate-900 mb-6">Why We're Different</h2>
+            <p class="text-slate-600 max-w-3xl mx-auto text-lg leading-relaxed">Founded by a former Royal Australian Air Force officer with extensive defence operations and major industry business development experience, backed by corporate finance and procurement expertise. We've assessed bids from the government evaluator's perspective and delivered winning contracts from the industry side.</p>
         </div>
     </section>
 
@@ -209,7 +234,7 @@
                         <div>
                             <div class="text-gold mb-2"><i class="fas fa-paper-plane text-xl"></i></div>
                             <h3 class="text-lg font-bold mb-2">Submission & Management</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed">We handle all submissions through government portals (AusTender, QTenders, VendorPanel) and manage the entire process through to contract award.</p>
+                            <p class="text-slate-400 text-sm leading-relaxed">We handle all government portal submissions and manage the entire process through to contract award.</p>
                         </div>
                     </div>
                 </div>
@@ -243,11 +268,11 @@
                 <div class="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col hover:border-gold/30 hover:-translate-y-1 transition-all card-shadow">
                     <h3 class="text-xl font-800 mb-6">Strategic Retainer</h3>
                     <ul class="space-y-4 text-slate-400 text-sm flex-grow">
-                        <li class="flex gap-3"><i class="fas fa-check text-gold flex-shrink-0 mt-0.5"></i>Monthly retainer of $2,000-3,000</li>
-                        <li class="flex gap-3"><i class="fas fa-check text-gold flex-shrink-0 mt-0.5"></i>Plus reduced success fee of 5-8%</li>
-                        <li class="flex gap-3"><i class="fas fa-check text-gold flex-shrink-0 mt-0.5"></i>Priority access to our team</li>
-                        <li class="flex gap-3"><i class="fas fa-check text-gold flex-shrink-0 mt-0.5"></i>Dedicated account management</li>
                         <li class="flex gap-3"><i class="fas fa-check text-gold flex-shrink-0 mt-0.5"></i><strong class="text-white">Ideal for:</strong> Businesses pursuing multiple opportunities simultaneously</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-gold flex-shrink-0 mt-0.5"></i>Dedicated account management</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-gold flex-shrink-0 mt-0.5"></i>Priority access to our team</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-gold flex-shrink-0 mt-0.5"></i>Plus reduced success fee of 5-8%</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-gold flex-shrink-0 mt-0.5"></i>Monthly retainer of $2,000-3,000</li>
                     </ul>
                 </div>
             </div>
@@ -326,17 +351,9 @@
                         <h3 class="font-bold text-slate-900">What industries do you work with?</h3>
                         <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-slate-400"></i></span>
                     </summary>
-                    <div class="mt-4 text-slate-600 leading-relaxed">
-                        <p class="mb-4">We specialise in businesses serving defence, law enforcement, corrections, and high-security government sectors. This typically includes:</p>
-                        <ul class="list-disc list-inside mb-4 space-y-2 ml-4">
-                            <li>Manufacturing (components, equipment, protective gear, vehicles)</li>
-                            <li>Marine and maritime services (vessels, maintenance, specialised equipment)</li>
-                            <li>Industrial services (fabrication, engineering, maintenance, logistics)</li>
-                            <li>Technical contractors (communications, security systems, specialised trades)</li>
-                            <li>Logistics and supply chain (warehousing, distribution, transport)</li>
-                        </ul>
-                        <p class="mb-4">If your business delivers technical or industrial capability with potential defence or law enforcement applications, we can help you position for these opportunities. We typically work with established businesses (10-100 employees, $1M+ revenue).</p>
-                    </div>
+                    <p class="mt-4 text-slate-600 leading-relaxed">
+                        We work with specialist small businesses across manufacturing, industrial services, marine and trade, logistics, and defence-related sectors. If you deliver technical or industrial capability and want government revenue, we can help. Typically, that means businesses with roughly 10 to 100 employees.
+                    </p>
                 </details>
 
                 <details class="group border border-slate-200 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden card-shadow">
@@ -403,23 +420,119 @@
     </section>
 
     <!-- 7. Contact Section -->
-    <section id="contact" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-800 text-slate-900 mb-6">Ready to Unlock Government Revenue?</h2>
-            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-                Book a free 30-minute assessment call to discuss your business and identify relevant opportunities.
-            </p>
-            <div class="space-y-6">
-                <a href="https://calendly.com/orsmondadvisory/30min" onclick="if (typeof Calendly !== 'undefined' && typeof Calendly.initPopupWidget === 'function') { Calendly.initPopupWidget({url: 'https://calendly.com/orsmondadvisory/30min'}); } else { window.open('https://calendly.com/orsmondadvisory/30min', '_blank'); } return false;" class="inline-block bg-gold text-slate-900 px-12 py-6 rounded-md font-800 text-lg hover:bg-yellow-500 transition-all shadow-xl uppercase tracking-wide">
-                    Book Your Free Assessment Call
-                </a>
-                <p class="text-slate-600">
-                    Or email us at: <a href="mailto:info@orsmondadvisory.com.au" class="text-slate-900 font-bold hover:text-gold transition-colors">info@orsmondadvisory.com.au</a>
-                </p>
-                <p class="text-sm text-slate-500">
-                    <!-- Calendly link: https://calendly.com/orsmondadvisory/30min -->
-                </p>
+    <section id="contact" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl md:text-4xl font-800 text-slate-900 mb-6">Ready to Unlock Government Revenue?</h2>
+                <p class="text-xl text-slate-600 max-w-2xl mx-auto">Submit your details for an opportunity assessment, or book a call to discuss your business in person.</p>
             </div>
+
+            <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+                <!-- Primary: Contact Form (2/3 width) -->
+                <div class="lg:flex-[2]">
+                    <div class="bg-white rounded-xl shadow-lg shadow-slate-200/80 border border-slate-100 p-8 md:p-10">
+                        <form id="opportunity-form" class="space-y-5">
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="firstName" class="contact-form-label">First Name <span class="text-red-500">*</span></label>
+                                    <input type="text" id="firstName" name="firstName" required class="contact-form-input" placeholder="John">
+                                </div>
+                                <div>
+                                    <label for="lastName" class="contact-form-label">Last Name <span class="text-red-500">*</span></label>
+                                    <input type="text" id="lastName" name="lastName" required class="contact-form-input" placeholder="Smith">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email" class="contact-form-label">Email <span class="text-red-500">*</span></label>
+                                <input type="email" id="email" name="email" required class="contact-form-input" placeholder="john@company.com.au">
+                            </div>
+                            <div>
+                                <label for="company" class="contact-form-label">Business/Company Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="company" name="company" required class="contact-form-input" placeholder="Your Company Pty Ltd">
+                            </div>
+                            <div>
+                                <label for="industry" class="contact-form-label">Industry <span class="text-red-500">*</span></label>
+                                <select id="industry" name="industry" required class="contact-form-input">
+                                    <option value="">Select your industry</option>
+                                    <option value="Manufacturing">Manufacturing</option>
+                                    <option value="Industrial Services">Industrial Services</option>
+                                    <option value="Marine & Trade">Marine & Trade</option>
+                                    <option value="Logistics & Transport">Logistics & Transport</option>
+                                    <option value="Defence-Related">Defence-Related</option>
+                                    <option value="Construction & Infrastructure">Construction & Infrastructure</option>
+                                    <option value="IT & Technology Services">IT & Technology Services</option>
+                                    <option value="Consulting & Professional Services">Consulting & Professional Services</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="revenue" class="contact-form-label">Annual Revenue <span class="text-slate-400 font-normal">(optional)</span></label>
+                                <select id="revenue" name="revenue" class="contact-form-input">
+                                    <option value="">Select range</option>
+                                    <option value="Prefer not to say">Prefer not to say</option>
+                                    <option value="Under $1M">Under $1M</option>
+                                    <option value="$1M-$5M">$1M-$5M</option>
+                                    <option value="$5M-$10M">$5M-$10M</option>
+                                    <option value="$10M+">$10M+</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="contact-form-label">Government sector interests <span class="text-slate-400 font-normal">(optional)</span></label>
+                                <div class="space-y-2 pt-1">
+                                    <label class="flex items-center gap-3 cursor-pointer text-slate-700">
+                                        <input type="checkbox" name="interest" value="Queensland State Government" class="w-4 h-4 rounded border-slate-300 text-amber-500 focus:ring-2 focus:ring-amber-400/40">
+                                        <span>Queensland State Government</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer text-slate-700">
+                                        <input type="checkbox" name="interest" value="Federal Government" class="w-4 h-4 rounded border-slate-300 text-amber-500 focus:ring-2 focus:ring-amber-400/40">
+                                        <span>Federal Government</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer text-slate-700">
+                                        <input type="checkbox" name="interest" value="Local Council" class="w-4 h-4 rounded border-slate-300 text-amber-500 focus:ring-2 focus:ring-amber-400/40">
+                                        <span>Local Council</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer text-slate-700">
+                                        <input type="checkbox" name="interest" value="Not sure yet" class="w-4 h-4 rounded border-slate-300 text-amber-500 focus:ring-2 focus:ring-amber-400/40">
+                                        <span>Not sure yet</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="phone" class="contact-form-label">Phone <span class="text-slate-400 font-normal">(optional)</span></label>
+                                <input type="tel" id="phone" name="phone" class="contact-form-input" placeholder="04XX XXX XXX">
+                            </div>
+                            <div id="form-success" class="hidden p-4 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium">
+                                Thank you! Your request has been submitted. Please check your email client to send the message.
+                            </div>
+                            <button type="submit" class="w-full bg-gold text-slate-900 px-8 py-5 rounded-md font-800 hover:bg-yellow-500 transition-all uppercase tracking-wide shadow-md hover:shadow-lg">
+                                Get My Opportunity Assessment
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- OR Divider -->
+                <div class="flex items-center justify-center py-4 lg:py-0 lg:w-12 shrink-0">
+                    <div class="flex items-center gap-4 lg:flex-col lg:gap-0 w-full lg:w-auto">
+                        <span class="flex-1 lg:hidden h-px bg-slate-300"></span>
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-200 text-slate-600 font-bold text-sm">OR</span>
+                        <span class="flex-1 lg:hidden h-px bg-slate-300"></span>
+                    </div>
+                </div>
+
+                <!-- Secondary: Calendar (1/3 width) -->
+                <div class="lg:flex-[1] flex flex-col">
+                    <div class="flex-1 bg-white rounded-xl shadow-lg shadow-slate-200/80 border border-slate-100 p-8 flex flex-col justify-center">
+                        <h3 class="text-xl font-800 text-slate-900 mb-4">Prefer to Talk First?</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Book a free 30-minute assessment call to discuss your business and explore opportunities together.</p>
+                        <a href="https://calendly.com/orsmondadvisory/30min" onclick="if (typeof Calendly !== 'undefined' && typeof Calendly.initPopupWidget === 'function') { Calendly.initPopupWidget({url: 'https://calendly.com/orsmondadvisory/30min'}); return false; }" target="_blank" rel="noopener noreferrer" class="inline-block bg-slate-900 text-white px-8 py-5 rounded-md font-800 text-center hover:bg-slate-800 transition-all uppercase tracking-wide shadow-md hover:shadow-lg">
+                            Book Assessment Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-slate-500 text-sm mt-10">Questions? Email us directly at <a href="mailto:info@orsmondadvisory.com.au" class="text-slate-900 font-semibold hover:text-gold transition-colors">info@orsmondadvisory.com.au</a></p>
         </div>
     </section>
 
@@ -429,7 +542,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-12 border-b border-slate-800 pb-12">
                 <div class="col-span-1 md:col-span-2">
                     <a href="#" class="inline-block mb-6" aria-label="Orsmond Advisory Home">
-                        <img src="logo.png" alt="Orsmond Advisory" class="h-auto w-auto object-contain" style="width: 200px; max-width: min(200px, 100%); filter: brightness(0) invert(1);">
+                        <img src="https://orsmondadvisory.com.au/logo.png" alt="Orsmond Advisory" class="h-auto w-auto object-contain" style="width: 200px; max-width: min(200px, 100%); filter: brightness(0) invert(1);">
                     </a>
                     <p class="text-slate-400 max-w-sm">We help established Queensland businesses win government contracts and build sustainable revenue streams. Success-based fees. You only pay when you win.</p>
                 </div>
@@ -440,9 +553,9 @@
                 </div>
                 <div>
                     <h4 class="font-bold mb-6 text-gold uppercase text-xs tracking-widest">Follow Us</h4>
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                    <a href="https://www.linkedin.com/company/orsmond-advisory/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
                         <i class="fab fa-linkedin text-xl"></i>
-                        <span class="text-sm">LinkedIn <span class="text-slate-500">(Coming Soon)</span></span>
+                        <span class="text-sm">LinkedIn</span>
                     </a>
                 </div>
             </div>
@@ -481,6 +594,42 @@
             backdrop.addEventListener('click', closeMenu);
             menuLinks.forEach(link => link.addEventListener('click', closeMenu));
         })();
+
+        // Opportunity Assessment Form - mailto submit
+        document.getElementById('opportunity-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const company = document.getElementById('company').value.trim();
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const industry = document.getElementById('industry').value;
+            const revenue = document.getElementById('revenue').value;
+            const phone = document.getElementById('phone').value.trim();
+            const interests = Array.from(document.querySelectorAll('input[name="interest"]:checked')).map(cb => cb.value);
+
+            const subject = encodeURIComponent('New Opportunity Assessment Request - ' + company);
+            const bodyParts = [
+                '--- Opportunity Assessment Request ---',
+                '',
+                'Name: ' + firstName + ' ' + lastName,
+                'Email: ' + email,
+                'Company: ' + company,
+                'Industry: ' + industry,
+                revenue ? 'Annual Revenue: ' + revenue : '',
+                phone ? 'Phone: ' + phone : '',
+                interests.length ? 'Government Interests: ' + interests.join(', ') : '',
+                '',
+                'Submitted via Orsmond Advisory website'
+            ];
+            const body = encodeURIComponent(bodyParts.filter(Boolean).join('\n'));
+
+            window.location.href = 'mailto:info@orsmondadvisory.com.au?subject=' + subject + '&body=' + body;
+
+            document.getElementById('form-success').classList.remove('hidden');
+            form.reset();
+            document.getElementById('form-success').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
     </script>
     <!-- Calendly widget script -->
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
