@@ -100,22 +100,35 @@
         .contact-form-input:focus { outline: none; border-color: #d4af37; box-shadow: 0 0 0 3px rgba(212,175,55,0.15); }
         select.contact-form-input { appearance: auto; cursor: pointer; }
         .contact-form-label { display: block; font-weight: 600; margin-bottom: 6px; color: #334155; font-size: 0.9rem; }
-        /* Header Logo */
+        /* Header Logo - scales with viewport */
         header img[src*="logo"],
         header img[alt*="Orsmond"],
         header a[aria-label*="Home"] img {
-            height: 325px !important;
+            height: clamp(56px, 14vw, 325px) !important;
             width: auto !important;
             object-fit: contain !important;
         }
-        /* Fixed header bar - consistent border */
+        /* Header bar - fixed 80px on desktop, vertically centered */
         .header-bar {
-            height: 80px;
-            min-height: 80px;
-            max-height: 80px;
+            min-height: 56px;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        @media (min-width: 768px) {
+            .header-bar {
+                min-height: 80px;
+                padding: 0;
+            }
+        }
+        @media (min-width: 1024px) {
+            .header-bar {
+                height: 80px;
+                flex-wrap: nowrap;
+            }
         }
         header {
-            min-height: 80px;
             box-sizing: border-box;
         }
     </style>
@@ -124,22 +137,22 @@
 
     <!-- Header / Navigation -->
     <header class="fixed top-0 left-0 right-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm box-border overflow-visible">
-        <div class="header-bar max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <div class="header-bar max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap lg:flex-nowrap justify-between items-center gap-2">
                 <div class="flex items-center gap-4 shrink-0">
-                    <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 hover:text-slate-900 focus:outline-none" aria-label="Open menu">
+                    <button id="mobile-menu-btn" class="sm:hidden p-2 text-slate-700 hover:text-slate-900 focus:outline-none" aria-label="Open menu">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                     <a href="#" class="flex items-center shrink-0" aria-label="Orsmond Advisory Home">
                         <img src="https://orsmondadvisory.com.au/logo.png" alt="Orsmond Advisory">
                     </a>
                 </div>
-                <nav class="hidden md:flex items-center gap-4 lg:gap-8 font-semibold text-sm uppercase tracking-wider text-slate-600 shrink-0">
+                <nav class="hidden sm:flex items-center gap-4 lg:gap-8 font-semibold text-sm uppercase tracking-wider text-slate-600 shrink-0">
                     <a href="#problem" class="hover:text-slate-900 transition-colors whitespace-nowrap">Challenges</a>
                     <a href="#solution" class="hover:text-slate-900 transition-colors whitespace-nowrap">Services</a>
                     <a href="#benefits" class="hover:text-slate-900 transition-colors whitespace-nowrap">Results</a>
                     <a href="#faq" class="hover:text-slate-900 transition-colors whitespace-nowrap">FAQ</a>
                 </nav>
-                <div class="hidden md:block shrink-0">
+                <div class="hidden sm:block shrink-0">
                     <a href="#contact" class="inline-block bg-slate-900 text-white px-4 py-3 sm:px-6 sm:py-4 lg:px-10 lg:py-5 rounded-md text-xs sm:text-sm font-bold hover:bg-slate-800 transition-all hover:-translate-y-0.5 shadow-lg whitespace-nowrap">
                         BOOK FREE ASSESSMENT
                     </a>
@@ -148,8 +161,8 @@
     </header>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu-backdrop" class="fixed inset-0 z-[59] bg-black/50 opacity-0 pointer-events-none md:hidden transition-opacity duration-300" aria-hidden="true"></div>
-    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 left-0 z-[60] bg-slate-900 navy-gradient w-full max-w-sm flex flex-col px-8 pt-24 pb-12 md:hidden">
+    <div id="mobile-menu-backdrop" class="fixed inset-0 z-[59] bg-black/50 opacity-0 pointer-events-none sm:hidden transition-opacity duration-300" aria-hidden="true"></div>
+    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 left-0 z-[60] bg-slate-900 navy-gradient w-full max-w-sm flex flex-col px-8 pt-24 pb-12 sm:hidden">
         <button id="mobile-menu-close" class="absolute top-6 right-6 text-white hover:text-gold transition-colors p-2" aria-label="Close menu">
             <i class="fas fa-times text-2xl"></i>
         </button>
@@ -177,7 +190,7 @@
                     Win Government Contracts. Grow Consistent Revenue.
                 </h1>
                 <p class="text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
-                    For industrial, marine, and technical businesses in Queensland: we identify high-value government contracts across state, federal, and local levels. We specialise in defence and high-security procurement, with proven capability in maritime, infrastructure, and civil contracts.
+                    For industrial, marine, and defence businesses in Queensland: we identify high-value government contracts, write competitive bids, and manage the entire process. We specialise in defence procurement and maritime equipment - turning government spending into sustainable revenue.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#contact" class="bg-gold text-slate-900 px-10 py-5 rounded-md font-800 text-center hover:bg-yellow-500 transition-all shadow-xl uppercase tracking-wide">
@@ -202,7 +215,7 @@
             <div class="p-8 border border-slate-100 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all bg-slate-50 card-shadow">
                 <i class="fas fa-file-contract text-3xl text-slate-400 mb-6"></i>
                 <h3 class="text-xl font-bold mb-4">Complex Paperwork</h3>
-                <p class="text-slate-600 leading-relaxed">Government tenders require layers of detailed documentation: capability statements, pricing schedules, compliance evidence, and risk assessments. Each bid comes with its own rules, word limits, and formats, making manual preparation slow, error-prone, and a major drain on your team’s time.</p>
+                <p class="text-slate-600 leading-relaxed">Tenders require detailed documentation across multiple formats and portals. Most capable businesses never bid because they don't have dedicated resources to navigate the complexity.</p>
             </div>
             <div class="p-8 border border-slate-100 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all bg-slate-50 card-shadow">
                 <i class="fas fa-shield-halved text-3xl text-slate-400 mb-6"></i>
@@ -222,7 +235,7 @@
     <section class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-800 text-slate-900 mb-6">Why We're Different</h2>
-            <p class="text-slate-600 max-w-3xl mx-auto text-lg leading-relaxed">Founded by a former Royal Australian Air Force officer with extensive defence operations and major industry business development experience, backed by corporate finance and procurement expertise. We've assessed bids from the government evaluator's perspective and delivered winning contracts from the industry side.</p>
+            <p class="text-slate-600 max-w-3xl mx-auto text-lg leading-relaxed">Founded by a former RAAF officer with 11+ years in defence operations and Boeing Business Development experience, combined with corporate finance expertise. We've evaluated bids from inside government and won contracts from inside industry. We know what works because we've been on both sides of the table.</p>
         </div>
     </section>
 
@@ -363,19 +376,7 @@
         </div>
     </section>
 
-    <!-- 6. Call to Action Section -->
-    <section id="assessment" class="py-24 navy-gradient text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-800 mb-6">Ready to Unlock Government Revenue?</h2>
-            <p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">Book a free 30-minute assessment call to discuss your business and identify relevant opportunities.</p>
-            <button onclick="if (typeof Calendly !== 'undefined' && typeof Calendly.initPopupWidget === 'function') { Calendly.initPopupWidget({url: 'https://calendly.com/orsmondadvisory/30min'}); } else { window.open('https://calendly.com/orsmondadvisory/30min', '_blank'); } return false;" class="inline-block bg-gold text-slate-900 px-12 py-6 rounded-md font-800 text-lg hover:bg-yellow-500 transition-all shadow-xl uppercase tracking-wide mb-4 cursor-pointer">
-                Book Your Free Assessment Call
-            </button>
-            <p class="text-slate-400 text-lg">Or email us at: <a href="mailto:info@orsmondadvisory.com.au" class="text-gold hover:text-yellow-400 transition-colors font-semibold">info@orsmondadvisory.com.au</a></p>
-        </div>
-    </section>
-
-    <!-- 7. FAQ Section -->
+    <!-- 6. FAQ Section -->
     <section id="faq" class="py-24 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-800 text-center mb-12">Frequently Asked Questions</h2>
