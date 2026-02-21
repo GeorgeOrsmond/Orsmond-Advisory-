@@ -115,6 +115,13 @@
             width: auto !important;
             object-fit: contain !important;
         }
+        @media (max-width: 639px) {
+            header img[src*="logo"],
+            header img[alt*="Orsmond"],
+            header a[aria-label*="Home"] img {
+                height: 80px !important;
+            }
+        }
         /* Header bar - fixed 80px on desktop, vertically centered */
         .header-bar {
             min-height: 56px;
