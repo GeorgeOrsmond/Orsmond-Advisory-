@@ -17,6 +17,14 @@
         .gold-accent { color: #d4af37; }
         .bg-gold { background-color: #d4af37; }
         .border-gold { border-color: #d4af37; }
+        /* Header Logo */
+        header img[src*="logo"],
+        header img[alt*="Orsmond"],
+        header a[aria-label*="Home"] img {
+            height: 325px !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
@@ -24,9 +32,9 @@
     <!-- Header / Navigation -->
     <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center min-h-[340px] py-4">
                 <a href="#" class="flex items-center shrink-0" aria-label="Orsmond Advisory - Home">
-                    <img src="logo.png" alt="Orsmond Advisory" class="h-10 w-auto object-contain" style="width: 190px; max-height: 48px;">
+                    <img src="https://orsmondadvisory.com.au/logo.png" alt="Orsmond Advisory">
                 </a>
                 <nav class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wider text-slate-600">
                     <a href="#problem" class="hover:text-slate-900 transition-colors">Challenges</a>
@@ -305,7 +313,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-12 border-b border-slate-800 pb-12">
                 <div class="col-span-1 md:col-span-2">
                     <a href="#" class="inline-block mb-6" aria-label="Orsmond Advisory - Home">
-                        <img src="logo.png" alt="Orsmond Advisory" class="h-8 w-auto object-contain" style="width: 160px; max-height: 40px;">
+                        <img src="https://orsmondadvisory.com.au/logo.png" alt="Orsmond Advisory" class="h-8 w-auto object-contain" style="width: 160px; max-height: 40px;">
                     </a>
                     <p class="text-slate-400 max-w-sm">Government tender consultancy for Australian small businesses. We find opportunities, write bids, and handle compliance so you can focus on delivery—with success-based fees and no upfront risk.</p>
                 </div>
@@ -325,7 +333,7 @@
                 </div>
             </div>
             <div class="flex flex-col md:flex-row justify-between text-slate-500 text-xs">
-                <p>&copy; 2024 Orsmond Advisory. All rights reserved.</p>
+                <p>&copy; 2026 Orsmond Advisory. All rights reserved.</p>
                 <div class="flex gap-6 mt-4 md:mt-0">
                     <a href="#" class="hover:text-white">Privacy Policy</a>
                     <a href="#" class="hover:text-white">Terms of Service</a>

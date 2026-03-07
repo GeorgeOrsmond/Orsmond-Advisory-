@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service | Orsmond Advisory</title>
+    <link rel="canonical" href="https://orsmondadvisory.com.au/terms.html">
     <meta name="description" content="Terms of Service for Orsmond Advisory. Read our terms for government tender consultancy services.">
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,40 +18,50 @@
         .gold-accent { color: #d4af37; }
         .bg-gold { background-color: #d4af37; }
         .border-gold { border-color: #d4af37; }
+        /* Header Logo - scales with viewport */
+        header img[src*="logo"],
+        header img[alt*="Orsmond"],
+        header a[aria-label*="Home"] img {
+            height: clamp(56px, 14vw, 325px) !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+        header { box-sizing: border-box; }
+        .header-bar { min-height: 56px; padding: 8px 0; display: flex; align-items: center; flex-wrap: wrap; }
+        @media (min-width: 768px) { .header-bar { min-height: 80px; padding: 0; } }
+        @media (min-width: 1024px) { .header-bar { height: 80px; flex-wrap: nowrap; } }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
     <!-- Header / Navigation -->
-    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="Orsmond Advisory.html" class="flex items-center shrink-0" aria-label="Orsmond Advisory Home">
-                    <img src="logo.png" alt="Orsmond Advisory" class="h-auto w-auto object-contain" style="width: 200px; max-width: min(200px, 100%);">
+    <header class="fixed top-0 left-0 right-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm box-border overflow-visible">
+        <div class="header-bar max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap lg:flex-nowrap justify-between items-center gap-2">
+                <a href="index.html" class="flex items-center shrink-0" aria-label="Orsmond Advisory Home">
+                    <img src="https://orsmondadvisory.com.au/logo.png" alt="Orsmond Advisory">
                 </a>
-                <nav class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wider text-slate-600">
-                    <a href="Orsmond Advisory.html#problem" class="hover:text-slate-900 transition-colors">Challenges</a>
-                    <a href="Orsmond Advisory.html#solution" class="hover:text-slate-900 transition-colors">Services</a>
-                    <a href="Orsmond Advisory.html#benefits" class="hover:text-slate-900 transition-colors">Results</a>
-                    <a href="Orsmond Advisory.html#faq" class="hover:text-slate-900 transition-colors">FAQ</a>
+                <nav class="hidden sm:flex items-center gap-4 lg:gap-8 font-semibold text-sm uppercase tracking-wider text-slate-600 shrink-0">
+                    <a href="index.html#problem" class="hover:text-slate-900 transition-colors whitespace-nowrap">Challenges</a>
+                    <a href="index.html#solution" class="hover:text-slate-900 transition-colors whitespace-nowrap">Services</a>
+                    <a href="index.html#benefits" class="hover:text-slate-900 transition-colors whitespace-nowrap">Results</a>
+                    <a href="index.html#faq" class="hover:text-slate-900 transition-colors whitespace-nowrap">FAQ</a>
                 </nav>
-                <div>
-                    <a href="Orsmond Advisory.html#contact" class="bg-slate-900 text-white px-6 py-3 rounded-md text-sm font-bold hover:bg-slate-800 transition-all transform hover:-translate-y-0.5 shadow-lg">
+                <div class="shrink-0">
+                    <a href="index.html#contact" class="inline-block bg-slate-900 text-white px-4 py-3 sm:px-6 sm:py-4 rounded-md text-xs sm:text-sm font-bold hover:bg-slate-800 transition-all hover:-translate-y-0.5 shadow-lg whitespace-nowrap">
                         BOOK FREE ASSESSMENT
                     </a>
                 </div>
-            </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="pt-32 pb-24">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <a href="Orsmond Advisory.html" class="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 mb-8 text-sm font-semibold">
+            <a href="index.html" class="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 mb-8 text-sm font-semibold">
                 <i class="fas fa-arrow-left"></i> Back to Home
             </a>
             <h1 class="text-4xl font-800 text-slate-900 mb-8">Terms of Service</h1>
-            <p class="text-slate-600 mb-8">Last updated: 2024</p>
+            <p class="text-slate-600 mb-8">Last updated: 2026</p>
 
             <div class="prose prose-slate max-w-none">
                 <div class="space-y-8 text-slate-600 leading-relaxed">
@@ -88,28 +99,28 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-12 border-b border-slate-800 pb-12">
                 <div class="col-span-1 md:col-span-2">
-                    <a href="Orsmond Advisory.html" class="inline-block mb-6" aria-label="Orsmond Advisory Home">
-                        <img src="logo.png" alt="Orsmond Advisory" class="h-8 w-auto object-contain" style="width: 200px; max-width: min(200px, 100%); filter: brightness(0) invert(1);">
+                    <a href="index.html" class="inline-block mb-6" aria-label="Orsmond Advisory Home">
+                        <img src="https://orsmondadvisory.com.au/logo.png" alt="Orsmond Advisory" class="h-auto w-auto object-contain" style="width: 200px; max-width: min(200px, 100%); filter: brightness(0) invert(1);">
                     </a>
                     <p class="text-slate-400 max-w-sm">We help established Queensland businesses win government contracts and build sustainable revenue streams. Success-based fees. You only pay when you win.</p>
                 </div>
                 <div>
                     <h4 class="font-bold mb-6 text-gold uppercase text-xs tracking-widest">Contact</h4>
                     <p class="text-slate-400 text-sm mb-2">Brisbane, QLD</p>
-                    <a href="mailto:Orsmondadvisory@gmail.com" class="text-slate-400 text-sm hover:text-white transition-colors block mb-2">Orsmondadvisory@gmail.com</a>
+                    <a href="mailto:info@orsmondadvisory.com.au" class="text-slate-400 text-sm hover:text-white transition-colors block mb-2">info@orsmondadvisory.com.au</a>
                     <a href="tel:+61466174144" class="text-slate-400 text-sm hover:text-white transition-colors block mb-2">+61 466 174 144</a>
                     <a href="tel:+61413650660" class="text-slate-400 text-sm hover:text-white transition-colors block">+61 413 650 660</a>
                 </div>
                 <div>
                     <h4 class="font-bold mb-6 text-gold uppercase text-xs tracking-widest">Follow Us</h4>
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                    <a href="https://www.linkedin.com/company/orsmond-advisory/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
                         <i class="fab fa-linkedin text-xl"></i>
                         <span class="text-sm">LinkedIn</span>
                     </a>
                 </div>
             </div>
             <div class="flex flex-col md:flex-row justify-between text-slate-500 text-xs">
-                <p>&copy; 2024 Orsmond Advisory. All rights reserved.</p>
+                <p>&copy; 2026 Orsmond Advisory. All rights reserved.</p>
                 <div class="flex gap-6 mt-4 md:mt-0">
                     <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
                     <a href="terms.html" class="hover:text-white">Terms of Service</a>

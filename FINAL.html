@@ -115,13 +115,6 @@
             width: auto !important;
             object-fit: contain !important;
         }
-        @media (max-width: 639px) {
-            header img[src*="logo"],
-            header img[alt*="Orsmond"],
-            header a[aria-label*="Home"] img {
-                height: 120px !important;
-            }
-        }
         /* Header bar - fixed 80px on desktop, vertically centered */
         .header-bar {
             min-height: 56px;
@@ -480,10 +473,7 @@
                 <!-- Primary: Contact Form (2/3 width) -->
                 <div class="lg:flex-[2]">
                     <div class="bg-white rounded-xl shadow-lg shadow-slate-200/80 border border-slate-100 p-8 md:p-10">
-                        <form id="opportunity-form" class="space-y-5" action="https://formsubmit.co/info@orsmondadvisory.com.au" method="POST">
-                            <input type="hidden" name="_subject" value="New Opportunity Assessment Request - Website">
-                            <input type="hidden" name="_template" value="table">
-                            <input type="hidden" name="_next" id="form-next-url" value="">
+                        <form id="opportunity-form" class="space-y-5">
                             <div class="grid sm:grid-cols-2 gap-5">
                                 <div>
                                     <label for="firstName" class="contact-form-label">First Name <span class="text-red-500">*</span></label>
@@ -554,7 +544,7 @@
                                 <input type="tel" id="phone" name="phone" class="contact-form-input" placeholder="04XX XXX XXX">
                             </div>
                             <div id="form-success" class="hidden p-4 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium">
-                                Thank you! Your request has been submitted. We'll be in touch soon.
+                                Thank you! Your request has been submitted. Please check your email client to send the message.
                             </div>
                             <button type="submit" class="w-full bg-gold text-slate-900 px-8 py-5 rounded-md font-800 hover:bg-yellow-500 transition-all uppercase tracking-wide shadow-md hover:shadow-lg">
                                 Get My Opportunity Assessment
@@ -647,16 +637,41 @@
             menuLinks.forEach(link => link.addEventListener('click', closeMenu));
         })();
 
-        // Opportunity Assessment Form - auto-email via FormSubmit.co
-        (function() {
-            const form = document.getElementById('opportunity-form');
-            const nextInput = document.getElementById('form-next-url');
-            if (nextInput) nextInput.value = window.location.origin + window.location.pathname + '?submitted=1#contact';
-            if (new URLSearchParams(window.location.search).get('submitted') === '1') {
-                const el = document.getElementById('form-success');
-                if (el) { el.classList.remove('hidden'); el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
-            }
-        })();
+        // Opportunity Assessment Form - mailto submit
+        document.getElementById('opportunity-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const company = document.getElementById('company').value.trim();
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const industry = document.getElementById('industry').value;
+            const revenue = document.getElementById('revenue').value;
+            const phone = document.getElementById('phone').value.trim();
+            const interests = Array.from(document.querySelectorAll('input[name="interest"]:checked')).map(cb => cb.value);
+
+            const subject = encodeURIComponent('New Opportunity Assessment Request - ' + company);
+            const bodyParts = [
+                '--- Opportunity Assessment Request ---',
+                '',
+                'Name: ' + firstName + ' ' + lastName,
+                'Email: ' + email,
+                'Company: ' + company,
+                'Industry: ' + industry,
+                revenue ? 'Annual Revenue: ' + revenue : '',
+                phone ? 'Phone: ' + phone : '',
+                interests.length ? 'Government Interests: ' + interests.join(', ') : '',
+                '',
+                'Submitted via Orsmond Advisory website'
+            ];
+            const body = encodeURIComponent(bodyParts.filter(Boolean).join('\n'));
+
+            window.location.href = 'mailto:info@orsmondadvisory.com.au?subject=' + subject + '&body=' + body;
+
+            document.getElementById('form-success').classList.remove('hidden');
+            form.reset();
+            document.getElementById('form-success').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
     </script>
     <!-- Calendly widget script -->
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
